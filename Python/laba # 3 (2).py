@@ -1,0 +1,6 @@
+x = input().strip()
+x = set(x)
+x.remove(" ")
+count = len(x)
+print(count)
+print(*x)
