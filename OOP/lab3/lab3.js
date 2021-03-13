@@ -5,7 +5,7 @@ const golosni = ["а", "е", "є", "и", "і", "ї", "о", "у", "ю", "я", "А
 
 let arr = str.replace(/[0-9]|[...]|[.,\/#!$%?\^&\*;:{}=\-_`~()@]/g, ' ').trim().split(' ');
 
-console.log(arr)
+console.log(arr);
     
 let dict = {};
 
