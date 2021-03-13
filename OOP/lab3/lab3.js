@@ -5,7 +5,6 @@ const golosni = ["а", "е", "є", "и", "і", "ї", "о", "у", "ю", "я", "А
 
 let arr = str.replace(/[0-9]|[...]|[.,\/#!$%?\^&\*;:{}=\-_`~()@]/g, ' ').trim().split(' ');
 
-console.log(arr);
     
 let dict = {};
 
@@ -28,10 +27,8 @@ for (let i in dict) {
 sortable.sort(function(a, b) {
     return a[1] - b[1];
 });
-for(let i=0 ;i<sortable.length;i++ ){
+for(let i in sortable){
     sortable[i].pop();
 }
 
-
 console.log(sortable.join(' '));
-
