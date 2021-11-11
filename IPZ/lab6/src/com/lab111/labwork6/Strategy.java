@@ -1,5 +1,7 @@
 package com.lab111.labwork6;
-
-public class Strategy {
-    
+/**
+ * interface Strategy
+ */
+public interface Strategy {
+    public void sort(Object[] mas);
 }
