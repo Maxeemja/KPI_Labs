@@ -18,7 +18,7 @@ public class Main {
         }
         public static void  getInfo(Ed_Facility A){ // функція для відображення інформації про об'єкт
             System.out.println("Назва: " + A.name);
-            System.out.println("Дата заснування: " + A.est_date);
+            System.out.println("Дата засну: " + A.est_date);
             System.out.println("Кількість студентів: " + A.students_num);
             System.out.println("Місце в рейтингу по Києву: " + A.rating);
             System.out.println("Середня ціна  навчання / рік: " + (int) A.cost_per_year + " гривень");
