@@ -1,0 +1,88 @@
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100vh;
+	margin: 0 auto;
+	text-align: center;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+		sans-serif;
+	overflow-x: hidden;
+}
+h1 {
+	margin-top: 10px;
+}
+.violet {
+	color: violet;
+}
+header {
+	margin-top: 30px;
+}
+
+footer {
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top: 1px solid grey;
+	.results {
+		width: 50%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&-item {
+			font-size: 18px;
+			span {
+				font-weight: bold;
+				font-size: 20px;
+				&.highlighted {
+					color: violet;
+				}
+			}
+		}
+	}
+}
+
+main {
+	.container-wrapper {
+		display: flex;
+		justify-content: center;
+		.container {
+			display: grid;
+			grid-template-columns: repeat(3, 100px);
+			grid-auto-rows: 100px;
+			padding: 10px;
+			border-radius: 8px;
+			margin: 30px auto 0 auto;
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+			.cell {
+				border: 1px solid violet;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 60px;
+				line-height: 90px;
+				font-style: italic;
+				&:hover {
+					cursor: pointer;
+					background: lightskyblue;
+					transition: 0.2s ease-in;
+				}
+			}
+		}
+	}
+	.btn-group {
+		margin-top: 30px;
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+		button {
+			padding: 10px;
+			background-color: violet;
+			border: none;
+			outline: none;
+			border-radius: 8px;
+			cursor: pointer;
+		}
+	}
+}
