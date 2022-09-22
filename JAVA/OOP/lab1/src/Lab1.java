@@ -1,11 +1,7 @@
 import java.util.Scanner;
 
-public class Main {
-    /* static final byte a=4;
-     static final byte b=5;
-     static final byte n=6;
-     static final byte m=7;*/
-    static final byte C = 0;
+public class Lab1 {
+    static final int C = 0;
     // 0210
     // за варіантом константа С=0 , операція О1 "+" , О2 "*"
 
@@ -13,10 +9,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Введіть a,b,c,d: ");
-        byte a = input.nextByte();
-        byte b = input.nextByte();
-        byte n = input.nextByte();
-        byte m = input.nextByte();
+        int a = input.nextInt();
+        int b = input.nextInt();
+        int n = input.nextInt();
+        int m = input.nextInt();
         input.close();
         float S = 0;
 
@@ -26,8 +22,8 @@ public class Main {
             if (a > n || b > m) {
                 System.out.println("S дорівнює 0");
             } else {
-                for (byte i = a; i <= n; i++) {
-                    for (byte j = b; j <= m; j++) {
+                for (int i = a; i <= n; i++) {
+                    for (int j = b; j <= m; j++) {
                         S += (float) (i * j) / (i + C);
                     }
                 }
