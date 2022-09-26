@@ -1,23 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="014a8dc7-de39-4a9b-a77e-032a7c275a68" name="Changes" comment="" />
+    <list default="true" id="014a8dc7-de39-4a9b-a77e-032a7c275a68" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lab0/lab0.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lab1/Data.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lab1/T1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lab1/T2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lab1/T3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/lab1/src/Lab1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/lab1/src/Lab1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/lab2/src/Lab2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/lab2/src/Lab2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/lab3/lab3.js" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/lab3(JS)/lab3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/lab3/src/Lab3.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/lab3/src/Lab3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/out/production/lab1/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/out/production/lab2/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab1/Lab0.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab1/Lab0.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="2EnI3sffnaMoFkrsMgWVsKRGVYu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.Lab1">
+  <component name="RunManager" selected="Application.Lab0">
     <configuration name="Lab0" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lab1.Lab0" />
       <module name="Parallel Programming" />
@@ -46,8 +86,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Lab1" />
         <item itemvalue="Application.Lab0" />
+        <item itemvalue="Application.Lab1" />
       </list>
     </recent_temporary>
   </component>
@@ -59,7 +99,33 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663224726718</updated>
+      <workItem from="1663224727962" duration="305000" />
+      <workItem from="1663332817515" duration="1480000" />
+      <workItem from="1663757673907" duration="4687000" />
+      <workItem from="1663777532838" duration="5559000" />
+      <workItem from="1663824686070" duration="3563000" />
+      <workItem from="1663839564877" duration="2386000" />
+      <workItem from="1663848560606" duration="160000" />
+      <workItem from="1663850073733" duration="2104000" />
+      <workItem from="1663929615578" duration="265000" />
+      <workItem from="1664119659074" duration="3300000" />
+      <workItem from="1664175441935" duration="15922000" />
     </task>
+    <task id="LOCAL-00001" summary="some restructuring">
+      <created>1663224997911</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663224997911</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="some restructuring" />
+    <option name="LAST_COMMIT_MESSAGE" value="some restructuring" />
   </component>
 </project>
