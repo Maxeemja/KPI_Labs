@@ -1,0 +1,8 @@
+<!-- ==================== Make api ================================== -->
+<property name="apiDir" value=""/>
+<target name="make-api" description="Compile javadoc">
+    <delete dir="${apiDir}" />
+    <mkdir dir="${apiDir}" />
+    <javadoc sourcepath="${sourceDir}" destdir="${apiDir}">
+    </javadoc>
+</target>

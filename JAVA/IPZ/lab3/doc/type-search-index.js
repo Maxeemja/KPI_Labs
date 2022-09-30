@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"com.lab111.labwork3","l":"Draw"},{"p":"com.lab111.labwork3","l":"Line"},{"p":"com.lab111.labwork3","l":"Main"},{"p":"com.lab111.labwork3","l":"Rectangle"},{"p":"com.lab111.labwork3","l":"Triangle"}];updateSearchResults();
