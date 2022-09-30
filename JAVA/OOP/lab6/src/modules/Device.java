@@ -4,15 +4,19 @@ public class Device {
 
     public float power;
     public float radiation;
-    public boolean status;
+    public boolean isPluggedIn;
 
-    Device(float power, float radiation, boolean status) {
+    Device(float power, float radiation, boolean isPluggedIn) {
         this.power = power;
         this.radiation = radiation;
-        this.status = status;
-        if(status){
+        this.isPluggedIn = isPluggedIn;
+        if(isPluggedIn){
             Set.setOfDevices.add(this);
         }
+    }
+
+    String getType() {
+        return "Device";
     }
 
 }

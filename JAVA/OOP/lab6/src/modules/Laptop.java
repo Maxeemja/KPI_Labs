@@ -1,9 +1,9 @@
 package modules;
 
-public class Mobile extends Device {
+public class Laptop extends Device {
 
-    public String type = "Mobile";
-    public Mobile(float power, float radiation, boolean isPluggedIn) {
+    String type = "Laptop";
+    public Laptop(float power, float radiation, boolean isPluggedIn) {
         super(power, radiation, isPluggedIn);
     }
 
