@@ -8,14 +8,14 @@ public class Lab1 {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Введіть a,b,c,d: ");
-        int a = input.nextInt();
-        int b = input.nextInt();
-        int n = input.nextInt();
-        int m = input.nextInt();
+        System.out.println("Введіть a,b,n,m: ");
+        final int a = input.nextInt();
+        final int b = input.nextInt();
+        final int n = input.nextInt();
+        final int m = input.nextInt();
         input.close();
-        float S = 0;
-
+        int S = 0;
+        // TODO:  negative integer  input possibility (?)
         if (a == 0) {
             System.out.println("Ділення на нуль неможливе");
         } else {
@@ -24,7 +24,10 @@ public class Lab1 {
             } else {
                 for (int i = a; i <= n; i++) {
                     for (int j = b; j <= m; j++) {
-                        S += (float) (i * j) / (i + C);
+                        //delta; сума арифметичної прогресії
+                        // upd: тут не дуже доречна арифм прогресія оскільки j змінюється
+
+                        S += j;
                     }
                 }
                 System.out.println("S дорівнює : " + S);

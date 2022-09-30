@@ -16,6 +16,7 @@ public class T2 extends Thread {
         MF = Data.initMatrix("T2 (MF)");
         MH = Data.initMatrix("T2 (MH)");
         MK = Data.initMatrix("T2 (MK)");
+
         MG = Data.f2(MF, MH, MK);
 
         try {

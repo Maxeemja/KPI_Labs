@@ -3,7 +3,6 @@ import java.util.Comparator;
 
 public class Main {
     public static class Ed_Facility{
-
         String name;
         int est_date;
         int students_num;
@@ -43,7 +42,7 @@ public class Main {
         System.out.println("Кількість студентів у порядку спадання: ");
         Arrays.stream(universities).sorted(Comparator.comparingInt(o -> -o.students_num)).forEach(System.out::println);
 
-        }
     }
+}
 
 

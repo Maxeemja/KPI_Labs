@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.lab111.labwork8","l":"Circle"},{"p":"com.lab111.labwork8","l":"Rectangle"},{"p":"com.lab111.labwork8","l":"Shape"},{"p":"com.lab111.labwork8","l":"Test"}];updateSearchResults();

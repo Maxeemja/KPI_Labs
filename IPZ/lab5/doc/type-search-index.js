@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"com.lab111.labwork5","l":"Iterator"},{"p":"com.lab111.labwork5","l":"RelativeTable"},{"p":"com.lab111.labwork5","l":"RoundsFromEnd"},{"p":"com.lab111.labwork5","l":"RoundsFromStart"},{"p":"com.lab111.labwork5","l":"Students"},{"p":"com.lab111.labwork5","l":"Test"}];updateSearchResults();

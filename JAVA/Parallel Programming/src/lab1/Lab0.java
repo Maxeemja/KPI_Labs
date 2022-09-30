@@ -6,14 +6,13 @@ package lab1;
  * Maksym Hrytsiuk
  * IO-02
  * 26.09.22
- * <p>
  * F1 - 1.18 d = (A*B) + (C*(B*(MA*MD)))
  * F2 - 2.24 MG = SORT(MF - MH * MK)
  * F3 - 3.23 s = MAX((MO*MP)(R + V))
- */
+ **/
 
 public class Lab0 extends Thread {
-    public static final int N = 10;
+    public static final int N = 1000;
 
     public static void main(String[] args) {
         (new Lab0()).start();

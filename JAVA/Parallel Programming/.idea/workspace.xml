@@ -2,19 +2,610 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="014a8dc7-de39-4a9b-a77e-032a7c275a68" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lab0/lab0.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lab1/Data.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lab1/T1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lab1/T2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lab1/T3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OOP/lab5/src/Lab5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OOP/lab5/src/modules/Letter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OOP/lab5/src/modules/Paragraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OOP/lab5/src/modules/Sentence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OOP/lab5/src/modules/Word.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 1/.checkstyle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 1/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 1/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 1/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 1/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 1/out/build/ IPZ_Laba1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 1/out/build/output/com/lab111/TestMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 1/out/eclipse-classes/com/lab111/TestMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 1/out/tempKey.store" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 1/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 1/src/main/java/com/lab111/TestMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 1/template.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/Package labwork2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/Package labwork3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/allclasses-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/com/lab111/labwork2/Cl1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/com/lab111/labwork2/Cl2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/com/lab111/labwork2/Cl3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/com/lab111/labwork2/If1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/com/lab111/labwork2/If2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/com/lab111/labwork2/If3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/com/lab111/labwork2/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/com/lab111/labwork2/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/element-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/index-files/index-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/index-files/index-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/index-files/index-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/jquery-ui.overrides.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/module-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/script-dir/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/script-dir/images/ui-bg_glass_65_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/script-dir/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/script-dir/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/script-dir/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/script-dir/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/script-dir/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/script-dir/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/script-dir/images/ui-icons_454545_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/script-dir/images/ui-icons_888888_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/script-dir/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/script-dir/jquery-3.5.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/script-dir/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/script-dir/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/script-dir/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/tag-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/doc/type-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/lab 2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/out/production/lab 2/com/lab111/labwork2/Cl1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/out/production/lab 2/com/lab111/labwork2/Cl2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/out/production/lab 2/com/lab111/labwork2/Cl3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/out/production/lab 2/com/lab111/labwork2/If1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/out/production/lab 2/com/lab111/labwork2/If2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/out/production/lab 2/com/lab111/labwork2/If3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/out/production/lab 2/com/lab111/labwork2/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/src.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/src/com/lab111/labwork2/Cl1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/src/com/lab111/labwork2/Cl2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/src/com/lab111/labwork2/Cl3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/src/com/lab111/labwork2/If1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/src/com/lab111/labwork2/If2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/src/com/lab111/labwork2/If3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab 2/src/com/lab111/labwork2/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/allclasses-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/com/lab111/labwork3/Draw.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/com/lab111/labwork3/Line.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/com/lab111/labwork3/Main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/com/lab111/labwork3/Rectangle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/com/lab111/labwork3/Triangle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/com/lab111/labwork3/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/com/lab111/labwork3/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/element-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/index-files/index-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/index-files/index-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/index-files/index-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/index-files/index-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/index-files/index-5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/index-files/index-6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/jquery-ui.overrides.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/module-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/script-dir/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/script-dir/images/ui-bg_glass_65_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/script-dir/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/script-dir/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/script-dir/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/script-dir/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/script-dir/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/script-dir/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/script-dir/images/ui-icons_454545_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/script-dir/images/ui-icons_888888_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/script-dir/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/script-dir/jquery-3.5.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/script-dir/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/script-dir/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/script-dir/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/tag-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/doc/type-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/lab3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/out/production/lab3/com/lab111/labwork3/Draw.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/out/production/lab3/com/lab111/labwork3/Line.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/out/production/lab3/com/lab111/labwork3/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/out/production/lab3/com/lab111/labwork3/Rectangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/out/production/lab3/com/lab111/labwork3/Triangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/src.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/src/com/lab111/labwork3/Draw.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/src/com/lab111/labwork3/Line.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/src/com/lab111/labwork3/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/src/com/lab111/labwork3/Rectangle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab3/src/com/lab111/labwork3/Triangle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/Package labwork4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/allclasses-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/com/lab111/labwork4/Coordinates.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/com/lab111/labwork4/Image.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/com/lab111/labwork4/Point.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/com/lab111/labwork4/Points.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/com/lab111/labwork4/PointsFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/com/lab111/labwork4/Test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/com/lab111/labwork4/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/com/lab111/labwork4/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/constant-values.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/element-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/index-files/index-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/index-files/index-10.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/index-files/index-11.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/index-files/index-12.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/index-files/index-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/index-files/index-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/index-files/index-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/index-files/index-5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/index-files/index-6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/index-files/index-7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/index-files/index-8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/index-files/index-9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/jquery-ui.overrides.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/module-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/script-dir/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/script-dir/images/ui-bg_glass_65_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/script-dir/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/script-dir/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/script-dir/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/script-dir/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/script-dir/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/script-dir/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/script-dir/images/ui-icons_454545_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/script-dir/images/ui-icons_888888_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/script-dir/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/script-dir/jquery-3.5.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/script-dir/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/script-dir/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/script-dir/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/tag-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/doc/type-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/lab4.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/out/production/lab4/com/lab111/labwork4/Coordinates.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/out/production/lab4/com/lab111/labwork4/Image.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/out/production/lab4/com/lab111/labwork4/Point.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/out/production/lab4/com/lab111/labwork4/Points.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/out/production/lab4/com/lab111/labwork4/PointsFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/out/production/lab4/com/lab111/labwork4/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/src.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/src/com/lab111/labwork4/Coordinates.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/src/com/lab111/labwork4/Image.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/src/com/lab111/labwork4/Point.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/src/com/lab111/labwork4/Points.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/src/com/lab111/labwork4/PointsFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab4/src/com/lab111/labwork4/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/Package labwork5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/allclasses-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/com/lab111/labwork5/Iterator.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/com/lab111/labwork5/RelativeTable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/com/lab111/labwork5/RoundsFromEnd.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/com/lab111/labwork5/RoundsFromStart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/com/lab111/labwork5/Students.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/com/lab111/labwork5/Test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/com/lab111/labwork5/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/com/lab111/labwork5/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/element-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/index-files/index-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/index-files/index-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/index-files/index-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/index-files/index-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/index-files/index-5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/index-files/index-6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/index-files/index-7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/index-files/index-8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/index-files/index-9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/jquery-ui.overrides.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/module-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/script-dir/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/script-dir/images/ui-bg_glass_65_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/script-dir/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/script-dir/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/script-dir/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/script-dir/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/script-dir/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/script-dir/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/script-dir/images/ui-icons_454545_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/script-dir/images/ui-icons_888888_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/script-dir/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/script-dir/jquery-3.5.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/script-dir/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/script-dir/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/script-dir/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/tag-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/doc/type-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/lab5.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/out/production/lab5/com/lab111/labwork5/Iterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/out/production/lab5/com/lab111/labwork5/RelativeTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/out/production/lab5/com/lab111/labwork5/RoundsFromEnd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/out/production/lab5/com/lab111/labwork5/RoundsFromStart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/out/production/lab5/com/lab111/labwork5/Students.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/out/production/lab5/com/lab111/labwork5/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/src.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/src/com/lab111/labwork5/Iterator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/src/com/lab111/labwork5/RelativeTable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/src/com/lab111/labwork5/RoundsFromEnd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/src/com/lab111/labwork5/RoundsFromStart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/src/com/lab111/labwork5/Students.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab5/src/com/lab111/labwork5/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/Package labwork6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/allclasses-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/com/lab111/labwork6/Context.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/com/lab111/labwork6/SortOne.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/com/lab111/labwork6/SortTwo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/com/lab111/labwork6/Strategy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/com/lab111/labwork6/Test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/com/lab111/labwork6/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/com/lab111/labwork6/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/element-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/index-files/index-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/index-files/index-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/index-files/index-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/index-files/index-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/jquery-ui.overrides.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/legal/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/legal/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/legal/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/legal/jquery.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/legal/jqueryUI.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/module-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/script-dir/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/script-dir/images/ui-bg_glass_65_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/script-dir/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/script-dir/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/script-dir/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/script-dir/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/script-dir/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/script-dir/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/script-dir/images/ui-icons_454545_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/script-dir/images/ui-icons_888888_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/script-dir/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/script-dir/jquery-3.5.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/script-dir/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/script-dir/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/script-dir/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/tag-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/doc/type-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/lab6.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/out/production/lab6/com/lab111/labwork6/Context.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/out/production/lab6/com/lab111/labwork6/SortOne.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/out/production/lab6/com/lab111/labwork6/SortTwo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/out/production/lab6/com/lab111/labwork6/Strategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/out/production/lab6/com/lab111/labwork6/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/src.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/src/com/lab111/labwork6/Context.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/src/com/lab111/labwork6/SortOne.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/src/com/lab111/labwork6/SortTwo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/src/com/lab111/labwork6/Strategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab6/src/com/lab111/labwork6/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/Package labwork7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/allclasses-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/com/lab111/labwork7/Action.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/com/lab111/labwork7/Add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/com/lab111/labwork7/Edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/com/lab111/labwork7/Interface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/com/lab111/labwork7/Remove.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/com/lab111/labwork7/Test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/com/lab111/labwork7/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/com/lab111/labwork7/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/element-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/index-files/index-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/index-files/index-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/index-files/index-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/index-files/index-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/index-files/index-5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/index-files/index-6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/index-files/index-7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/index-files/index-8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/jquery-ui.overrides.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/legal/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/legal/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/legal/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/legal/jquery.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/legal/jqueryUI.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/module-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/script-dir/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/script-dir/images/ui-bg_glass_65_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/script-dir/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/script-dir/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/script-dir/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/script-dir/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/script-dir/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/script-dir/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/script-dir/images/ui-icons_454545_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/script-dir/images/ui-icons_888888_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/script-dir/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/script-dir/jquery-3.5.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/script-dir/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/script-dir/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/script-dir/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/tag-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/doc/type-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/lab7.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/out/production/lab7/com/lab111/labwork7/Action.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/out/production/lab7/com/lab111/labwork7/Add.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/out/production/lab7/com/lab111/labwork7/Edit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/out/production/lab7/com/lab111/labwork7/Interface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/out/production/lab7/com/lab111/labwork7/Remove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/out/production/lab7/com/lab111/labwork7/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/src.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/src/com/lab111/labwork7/Action.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/src/com/lab111/labwork7/Add.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/src/com/lab111/labwork7/Edit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/src/com/lab111/labwork7/Interface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/src/com/lab111/labwork7/Remove.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab7/src/com/lab111/labwork7/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/Package labwork8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/allclasses-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/com/lab111/labwork8/Circle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/com/lab111/labwork8/Rectangle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/com/lab111/labwork8/Shape.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/com/lab111/labwork8/Test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/com/lab111/labwork8/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/com/lab111/labwork8/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/element-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/index-files/index-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/index-files/index-10.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/index-files/index-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/index-files/index-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/index-files/index-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/index-files/index-5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/index-files/index-6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/index-files/index-7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/index-files/index-8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/index-files/index-9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/jquery-ui.overrides.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/legal/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/legal/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/legal/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/legal/jquery.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/legal/jqueryUI.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/module-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/script-dir/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/script-dir/images/ui-bg_glass_65_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/script-dir/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/script-dir/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/script-dir/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/script-dir/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/script-dir/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/script-dir/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/script-dir/images/ui-icons_454545_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/script-dir/images/ui-icons_888888_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/script-dir/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/script-dir/jquery-3.5.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/script-dir/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/script-dir/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/script-dir/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/tag-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/doc/type-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/lab8.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/out/production/lab8/com/lab111/labwork8/Circle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/out/production/lab8/com/lab111/labwork8/Rectangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/out/production/lab8/com/lab111/labwork8/Shape.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/out/production/lab8/com/lab111/labwork8/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/src.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/src/com/lab111/labwork8/Circle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/src/com/lab111/labwork8/Rectangle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/src/com/lab111/labwork8/Shape.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab8/src/com/lab111/labwork8/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/Package labwork9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/allclasses-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/com/lab111/labwork9/FactoryAPI.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/com/lab111/labwork9/FactoryDB.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/com/lab111/labwork9/FactoryFile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/com/lab111/labwork9/ObjectDB.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/com/lab111/labwork9/ObjectFile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/com/lab111/labwork9/ProdObject.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/com/lab111/labwork9/ProdRequest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/com/lab111/labwork9/RequestDB.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/com/lab111/labwork9/RequestFile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/com/lab111/labwork9/Test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/com/lab111/labwork9/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/com/lab111/labwork9/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/element-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/index-files/index-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/index-files/index-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/index-files/index-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/index-files/index-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/index-files/index-5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/index-files/index-6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/index-files/index-7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/index-files/index-8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/index-files/index-9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/jquery-ui.overrides.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/legal/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/legal/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/legal/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/legal/jquery.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/legal/jqueryUI.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/module-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/script-dir/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/script-dir/images/ui-bg_glass_65_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/script-dir/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/script-dir/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/script-dir/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/script-dir/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/script-dir/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/script-dir/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/script-dir/images/ui-icons_454545_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/script-dir/images/ui-icons_888888_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/script-dir/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/script-dir/jquery-3.5.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/script-dir/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/script-dir/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/script-dir/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/tag-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/doc/type-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/lab9.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/out/production/lab9/com/lab111/labwork9/FactoryAPI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/out/production/lab9/com/lab111/labwork9/FactoryDB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/out/production/lab9/com/lab111/labwork9/FactoryFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/out/production/lab9/com/lab111/labwork9/ObjectDB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/out/production/lab9/com/lab111/labwork9/ObjectFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/out/production/lab9/com/lab111/labwork9/ProdObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/out/production/lab9/com/lab111/labwork9/ProdRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/out/production/lab9/com/lab111/labwork9/RequestDB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/out/production/lab9/com/lab111/labwork9/RequestFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/out/production/lab9/com/lab111/labwork9/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/src.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/src/com/lab111/labwork9/FactoryAPI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/src/com/lab111/labwork9/FactoryDB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/src/com/lab111/labwork9/FactoryFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/src/com/lab111/labwork9/ObjectDB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/src/com/lab111/labwork9/ObjectFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/src/com/lab111/labwork9/ProdObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/src/com/lab111/labwork9/ProdRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/src/com/lab111/labwork9/RequestDB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/src/com/lab111/labwork9/RequestFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IPZ/lab9/src/com/lab111/labwork9/Test.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../OOP/lab1/src/Lab1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/lab1/src/Lab1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../OOP/lab2/src/Lab2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/lab2/src/Lab2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OOP/lab3/lab3.js" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/lab3(JS)/lab3.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../OOP/lab3/src/Lab3.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/lab3/src/Lab3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/lab5/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/lab5(js)/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/lab5/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/lab5(js)/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/lab5/modules/letter.js" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/lab5(js)/modules/letter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/lab5/modules/paragraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/lab5(js)/modules/paragraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/lab5/modules/punctuation.js" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/lab5(js)/modules/punctuation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/lab5/modules/sentence.js" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/lab5(js)/modules/sentence.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/lab5/modules/word.js" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/lab5(js)/modules/word.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../OOP/out/production/lab1/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../OOP/out/production/lab2/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab0/lab0.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab1/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab1/Data.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lab1/Lab0.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab1/Lab0.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab1/T2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab1/T2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +644,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -109,7 +701,13 @@
       <workItem from="1663850073733" duration="2104000" />
       <workItem from="1663929615578" duration="265000" />
       <workItem from="1664119659074" duration="3300000" />
-      <workItem from="1664175441935" duration="15922000" />
+      <workItem from="1664175441935" duration="17807000" />
+      <workItem from="1664202252034" duration="2909000" />
+      <workItem from="1664216470711" duration="44000" />
+      <workItem from="1664392595471" duration="358000" />
+      <workItem from="1664442911893" duration="1000" />
+      <workItem from="1664446338362" duration="7000" />
+      <workItem from="1664449703735" duration="3545000" />
     </task>
     <task id="LOCAL-00001" summary="some restructuring">
       <created>1663224997911</created>

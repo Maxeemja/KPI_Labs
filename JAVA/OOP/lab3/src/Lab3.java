@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Lab3 {
     //0210
@@ -9,7 +10,6 @@ public class Lab3 {
         StringBuilder initStr = new StringBuilder("Ознайомлення з рядками та використання основних методів їх обробки в мові програмування Джава");
 
         Map<String, Integer> dict = new HashMap<>(); // основна хеш мапа для збереження каунтера голосних для кожного слова в реченні
-
 
         // основна операція по обрахунку к-ті голосних у кожному слові речення
         int counter = 0;
@@ -25,22 +25,17 @@ public class Lab3 {
             }
         }
 
-        // подальші махінації були проведені для сортування хешмапи за зростанням значень
-        LinkedHashMap<String, Integer> sortedMap = new LinkedHashMap<>();
-        ArrayList<Integer> list = new ArrayList<>();
-        for (Map.Entry<String, Integer> entry : dict.entrySet()) {
-            list.add(entry.getValue());
-        }
-        Collections.sort(list);
-        for (int num : list) {
-            for (Map.Entry<String, Integer> entry : dict.entrySet()) {
-                if (entry.getValue().equals(num)) {
-                    sortedMap.put(entry.getKey(), num);
-                }
-            }
-        }
 
-        System.out.println(String.join(" ", sortedMap.keySet()));
+        List<String> sorted =
+                dict.entrySet()
+                        .stream()
+                        .sorted(Map.Entry.comparingByValue())
+                        .map(Map.Entry::getKey)
+                        .collect(Collectors.toList());
 
+//        System.out.println(String.join(" ", dict.keySet()));
+        System.out.println();
+        System.out.println(String.join(" ", sorted));
+//        System.out.println(String.join(" ", sorted));
     }
 }

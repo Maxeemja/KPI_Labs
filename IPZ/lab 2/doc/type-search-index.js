@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"com.lab111.labwork2","l":"Cl1"},{"p":"com.lab111.labwork2","l":"Cl2"},{"p":"com.lab111.labwork2","l":"Cl3"},{"p":"com.lab111.labwork2","l":"If1"},{"p":"com.lab111.labwork2","l":"If2"},{"p":"com.lab111.labwork2","l":"If3"}];updateSearchResults();
