@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class Main {
+public class Lab4 {
     public static class Ed_Facility{
         String name;
         int est_date;

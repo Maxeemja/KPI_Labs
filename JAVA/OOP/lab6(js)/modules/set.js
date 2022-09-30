@@ -39,9 +39,9 @@ export default class Set {
 
   /**
    * Filters the devices by the specified EM radiation interval.
-   * @param {Number} start beggining of the range.
+   * @param {Number} start beginning of the range.
    * @param {Number} stop end of the range.
-   * @returns {Array} filtered array.
+   * @returns {*[]} filtered array.
    */
   static sortRad(start, stop) {
     if (start < 0 || stop < 0 || start >= stop || !isNum(start) || !isNum(stop)) {
