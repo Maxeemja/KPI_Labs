@@ -23,7 +23,6 @@ public class Set {
         if (start < 0 || end < 0 || start >= end) {
             throw new Error("Invalid values of borders!");
         }
-        int counter = 0;
         String list = Set.setOfDevices.stream().filter(device -> device.radiation >= start && device.radiation <= end)
                 .map(device -> String.format("%s, emits %.2f Hz", device.getType(), device.radiation))
                 .collect(Collectors.joining("; "));
