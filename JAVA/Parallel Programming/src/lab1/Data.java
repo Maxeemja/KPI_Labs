@@ -1,155 +1,99 @@
 package lab1;
 
 import java.util.Arrays;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Data {
+    public static final int N = 4;
+    public static final int P = 4;
+    public static final int H = N / P;
 
-    private static final Random random = new Random();
-    private static final Boolean r = false;
-    private static final int N = Lab0.N;
+    public static int[][] MC = new int[N][N];
+    public static int[][] MD = new int[N][N];
+
+    public static int[] A = new int[N];
+    public static int[] B = new int[N];
+    public static int[] R = new int[N];
+    public static int[] Z = new int[N];
+    public static int[] E = new int[N];
+    public static int[] X = new int[N];
+
+    public static int d = 0;
+    public static int p = 0;
+    public static AtomicInteger a = new AtomicInteger();
+
+    public static final Object W = new Object();
+    public static final Object Y = new Object();
+
+    // Елементи взаємодії
+    public static Semaphore Sem2 = new Semaphore(1, true);
+    public static Semaphore Sem3 = new Semaphore(0, true);
+    public static Semaphore Sem4 = new Semaphore(0, true);
+    public static Semaphore Sem5 = new Semaphore(0, true);
+    public static Semaphore Sem6 = new Semaphore(0, true);
+    public static Semaphore Sem7 = new Semaphore(0, true);
+    public static Semaphore Sem8 = new Semaphore(0, true);
+    public static Semaphore Sem9 = new Semaphore(0, true);
+    public static Semaphore Sem10 = new Semaphore(0, true);
+    public static Semaphore Sem11 = new Semaphore(0, true);
+    public static Semaphore Sem12 = new Semaphore(0, true);
+    public static Semaphore Sem13 = new Semaphore(0, true);
+    public static Semaphore Sem14 = new Semaphore(0, true);
 
 
-    // блок технічних ф-цій
-    public static int[] initVector(String name) {
-        Scanner sc = new Scanner(System.in);
-        int[] result = new int[N];
-        if (N < 5) {
-            for (int i = 0; i < N; i++) {
-                System.out.println(name + "[" + i + "] = ");
-                result[i] = sc.nextInt();
-            }
-        } else {
-            if (r) {
-                for (int i = 0; i < N; i++)
-                    result[i] = random.nextInt(10) + 1;
-            } else {
-                for (int i = 0; i < N; i++)
-                    result[i] = 1;
-            }
+    public static CyclicBarrier Bar1 = new CyclicBarrier(4);
+
+    public static void calculateResultPart(int ai, int pi,int di, int start, int end) {
+        writeSubVectorToResult(addSubVectors(multiplySubVectorByScalar(multiplyVectorBySubMatrix(X, MD, start, end), pi, start, end), multiplySubVectorByScalar(E, ai*di, start, end), start, end), start, end);
+    }
+
+    public static void writeSubVectorToResult(int[] G, int start, int end) {
+        if (end - start >= 0) System.arraycopy(G, start, A, start, end - start);
+    }
+
+    static int[] multiplySubVectorByScalar(int[] X, int x, int start, int end) {
+        int[] result = new int[X.length];
+        for (int i = start; i < end; i++) {
+            result[i] = X[i] * x;
         }
         return result;
     }
 
-    public static int[][] initMatrix(String name) {
-        Scanner sc = new Scanner(System.in);
-        int[][] result = new int[N][N];
-        if (N < 5) {
-            for (int i = 0; i < N; i++) {
-                for (int j = 0; j < N; j++) {
-                    System.out.println(name + "[" + i + "]" + "[" + j + "] = ");
-                    result[i][j] = sc.nextInt();
-                }
-            }
-        } else {
-            if (r) {
-                for (int i = 0; i < N; i++) {
-                    for (int j = 0; j < N; j++) {
-                        result[i][j] = random.nextInt(10) + 1;
-                    }
-                }
-            } else {
-                for (int i = 0; i < N; i++)
-                    for (int j = 0; j < N; j++)
-                        result[i][j] = 1;
-            }
+    static int[] addSubVectors(int[] X, int[] Y, int start, int end) {
+        int[] result = new int[X.length];
+        for (int i = start; i < end; i++) {
+            result[i] = X[i] + Y[i];
         }
-
         return result;
     }
 
-    public static void printMatrix(int[][] matrix) {
-        for (int[] ints : matrix) {
-            for (int anInt : ints) {
-                System.out.print(anInt + " ");
-            }
-            System.out.println();
+    static int scalarProductPart(int[] X, int[] Y, int start, int end) {
+        int result = 0;
+        for (int i = start; i < end; i++) {
+            result += X[i] * Y[i];
         }
+        return result;
     }
 
-    public static int[][] sortMatrix(int[][] matrix) {
-        for (int[] row : matrix) {
-            Arrays.sort(row);
-        }
-        return matrix;
-    }
-
-
-    // блок функцій для обчислення завдання за варіантами
-    // * F1 - 1.18 d = (A*B) + (C*(B*(MA*MD)))
-    public static int[] f1(int[] a, int[] b, int[] c, int[][] ma, int[][] md) {
-        return sumV(multiplyV(a, b), (multiplyV(c, (multiplyVecM(b, multiplyM(ma, md))))));
-    }
-
-    //* F2 - 2.24 MG = SORT(MF - MH * MK)
-    public static int[][] f2(int[][] mf, int[][] mh, int[][] mk) {
-        return  sortMatrix(differenceM(mf, multiplyM(mh, mk)));
-    }
-
-    // * F3 - 3.23 s = MAX((MO*MP)(R + V))
-    public static int f3(int[] r, int[] v, int[][] mo, int[][] mp) {
-        return maxVector(multiplyVecM(sumV(r, v), multiplyM(mo, mp)));
-    }
-
-
-    // блок допоміжних функцій-обчислювальників
-    private static int maxVector(int[] A) {
-        int r = A[0];
-        for (int i = 1; i < N; i++) {
-            if (A[i] > r) {
-                r = A[i];
-            }
-        }
-        return r;
-    }
-
-    private static int[] sumV(int[] a, int[] b) {
-        int[] c = new int[N];
-        for (int i = 0; i < N; i++) {
-            c[i] = a[i] + b[i];
-        }
-        return c;
-    }
-
-    private static int[][] differenceM(int[][] ma, int[][] mb) {
-        for (int i = 0; i < N; i++) {
+    static int[] multiplyVectorBySubMatrix(int[] vec, int[][] ma, int start, int end) {
+        int[] res = new int[N];
+        for (int i = start; i < end; i++) {
             for (int j = 0; j < N; j++) {
-                ma[i][j] = ma[i][j] - mb[j][i];
+                res[i] += vec[j] * ma[j][i];
             }
         }
-        return ma;
+        return res;
     }
 
-    private static int[] multiplyVecM(int[] a, int[][] ma) {
-        int[] c = new int[N];
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N; j++) {
-                c[i] += a[j] * ma[j][i];
-            }
-        }
-        return c;
+    // Xh = R * MCh
+    static void calculation3(int start, int end){
+        int[] res = multiplyVectorBySubMatrix(R, MC, start, end);
+        System.arraycopy(res, start, X, start, H);
     }
 
-    private static int[] multiplyV(int[] a, int[] b) {
-        int[] c = new int[N];
-        for (int i = 0; i < N; i++) {
-            c[i] = a[i] * b[i];
-        }
-        return c;
+    public static void printVector(int[] X) throws InterruptedException {
+        System.out.println(Arrays.toString(X));
     }
-
-    private static int[][] multiplyM(int[][] ma, int[][] mb) {
-        int[][] c = new int[N][N];
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N; j++) {
-                for (int k = 0; k < N; k++) {
-                    c[i][j] += ma[i][k] * mb[k][j];
-                }
-            }
-        }
-        return c;
-    }
-
-
 }

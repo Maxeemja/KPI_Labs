@@ -10,13 +10,14 @@ public class Lab5 {
         System.out.println("Введіть ваш текст: ");
         final StringBuilder initStr = new StringBuilder(sc.nextLine());
         sc.close();
-        ArrayList<Word> list = new ArrayList<>(Collections.emptyList()); // основний ліст зі словами для збереження каунтера голосних для кожного слова в реченні
+        // основний ліст зі словами для збереження каунтера голосних для кожного слова в реченні
+        ArrayList<Word> list = new ArrayList<>(Collections.emptyList());
 
         //split по регулярочці для розбиття на слова  по символам '!', '.', '?' та пробілам
         for (String w : initStr.toString().split("[.?! ]\\s*")) {
-            if(Objects.equals(w, "")) {
+            /*if(Objects.equals(w, "")) {
                 continue;
-            }
+            }*/
             Word word = Word.toWord(w);
             list.add(word);
         }

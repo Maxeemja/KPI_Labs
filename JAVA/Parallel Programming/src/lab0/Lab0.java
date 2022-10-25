@@ -1,4 +1,4 @@
-package lab1;
+package lab0;
 
 /**
  * Parallel programming.
