@@ -1,7 +1,8 @@
 AMO
 SP
 JAVA/**/out/*
-
+Python/**/.idea
+**/__pycache__/
 quizHub
 COURSE_WORK/
 /Spring/
