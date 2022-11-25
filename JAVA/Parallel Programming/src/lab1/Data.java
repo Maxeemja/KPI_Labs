@@ -6,7 +6,7 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Data {
-    public static final int N = 4;
+    public static final int N = 1500;
     public static final int P = 4;
     public static final int H = N / P;
 
@@ -46,7 +46,12 @@ public class Data {
     public static CyclicBarrier Bar1 = new CyclicBarrier(4);
 
     public static void calculateResultPart(int ai, int pi,int di, int start, int end) {
-        writeSubVectorToResult(addSubVectors(multiplySubVectorByScalar(multiplyVectorBySubMatrix(X, MD, start, end), pi, start, end), multiplySubVectorByScalar(E, ai*di, start, end), start, end), start, end);
+        writeSubVectorToResult(
+                addSubVectors(
+                        multiplySubVectorByScalar(multiplyVectorBySubMatrix(X, MD, start, end), pi, start, end),
+                        multiplySubVectorByScalar(E, ai*di, start, end), start, end
+                )
+                , start, end);
     }
 
     public static void writeSubVectorToResult(int[] G, int start, int end) {
