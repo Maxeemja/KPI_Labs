@@ -1,0 +1,12 @@
+﻿  Assembling longop.asm...
+longop.asm(1): error A2008: syntax error : .
+longop.asm(2): error A2008: syntax error : .
+longop.asm(15): error A2070: invalid instruction operands
+longop.asm(41): error A2070: invalid instruction operands
+longop.asm(50): error A2070: invalid instruction operands
+longop.asm(63): error A2070: invalid instruction operands
+longop.asm(65): error A2070: invalid instruction operands
+longop.asm(69): error A2070: invalid instruction operands
+longop.asm(83): error A2070: invalid instruction operands
+longop.asm(94): error A2070: invalid instruction operands
+D:\visual studio\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: выход из команды "ml64.exe /c /nologo /Zi /Fo"x64\Debug\longop.obj" /W3 /errorReport:prompt  /Talongop.asm" с кодом "1".

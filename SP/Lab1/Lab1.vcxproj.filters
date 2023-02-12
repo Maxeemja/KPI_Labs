@@ -18,5 +18,8 @@
     <MASM Include="Lab1.asm">
       <Filter>Исходные файлы</Filter>
     </MASM>
+    <MASM Include="test.asm">
+      <Filter>Исходные файлы</Filter>
+    </MASM>
   </ItemGroup>
 </Project>
