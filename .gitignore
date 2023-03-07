@@ -10,5 +10,5 @@ C++
 DictionarySpringApp
 KPINodeJS
 node-js_project
-AI_with_Images/**/*.jpg
-AI_with_Images/**/*.mp4
+AI_with_Images/
+!AI_with_Images/**/*.py
