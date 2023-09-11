@@ -13,3 +13,4 @@ node-js_project
 AI_with_Images/
 !AI_with_Images/**/*.py
 !CA-3_CourseWork/CourseWork/**/*.cpp
+GameProgLabs/
