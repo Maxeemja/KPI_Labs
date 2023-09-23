@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f0a4d48-5836-4a16-9203-c301fe3b344a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" afterDir="false" />
+    <list default="true" id="5f0a4d48-5836-4a16-9203-c301fe3b344a" name="Changes" comment="removed .idea">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI in work with Images/Lab2/lab2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Computer Vision/Lab1/Lab1_3D.py" beforeDir="false" afterPath="$PROJECT_DIR$/Computer Vision/Lab1/Lab1_3D.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Computer Vision/Lab1/test3d.py" beforeDir="false" afterPath="$PROJECT_DIR$/Computer Vision/Lab1/test3d.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,9 +19,26 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Maxeemja&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="bef81a53-8f45-42b8-8ff3-b031650d217e" />
+        <option name="url" value="https://github.com/Maxeemja/KPI_Labs.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2EcYZyjlsVBZuoiLMPCifGUJg9e" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -24,8 +46,19 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/IT/KPI_Labs/JAVA/Parallel Programming"
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/IT/KPI_Labs",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -43,6 +76,8 @@
       <workItem from="1664548831440" duration="446000" />
       <workItem from="1664558843326" duration="27000" />
       <workItem from="1666876131565" duration="40000" />
+      <workItem from="1695424817504" duration="444000" />
+      <workItem from="1695425405300" duration="1872000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore changes">
       <created>1663164529843</created>
@@ -122,5 +157,11 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.gitignore" />
     <MESSAGE value="removed .idea" />
     <option name="LAST_COMMIT_MESSAGE" value="removed .idea" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/KPI_Labs$Lab1_3D.coverage" NAME="Lab1_3D Coverage Results" MODIFIED="1695427188981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Computer Vision/Lab1" />
+    <SUITE FILE_PATH="coverage/KPI_Labs$Lab1_2D.coverage" NAME="Lab1_2D Coverage Results" MODIFIED="1695425549376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Computer Vision/Lab1" />
+    <SUITE FILE_PATH="coverage/KPI_Labs$lab2.coverage" NAME="lab2 Coverage Results" MODIFIED="1695425499850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AI_with_Images/Lab2" />
+    <SUITE FILE_PATH="coverage/KPI_Labs$test3d.coverage" NAME="test3d Coverage Results" MODIFIED="1695427294882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Computer Vision/Lab1" />
   </component>
 </project>
