@@ -11,7 +11,7 @@ def read_text_from_txt(file1):
 def mapper(file, separator=' '): 
   data = read_text_from_txt(file)
   words = data.split(separator)
-  mapped_data = [(word, 1) for word in words] 
+  mapped_data = [(word, 2) for word in words] 
   print(f"Mapped data from {file}", mapped_data, "\t") 
   return mapped_data
 

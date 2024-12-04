@@ -115,3 +115,6 @@ def computeLongestPalindromeLength(text):
                 dp[start][end] = max(dp[start + 1][end], dp[start][end - 1])
 
     return dp[0][n - 1]
+
+
+print(findSingletonWords('juice apple apple'))
