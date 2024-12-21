@@ -3,24 +3,22 @@ import networkx as nx
 import pandas as pd
 import plotly.graph_objects as go
 
-
 matrix_adjacency = [
     [0, 1, 1, 0, 0, 1],  # 1: connected to 2, 3, 6
     [1, 0, 0, 1, 1, 0],  # 2: connected to 1, 4, 5
     [1, 0, 0, 0, 1, 0],  # 3: connected to 1, 5
     [0, 1, 0, 0, 0, 1],  # 4: connected to 2, 6
     [0, 1, 1, 0, 0, 1],  # 5: connected to 2, 3, 6
-    [1, 0, 0, 1, 1, 0]   # 6: connected to 1, 4, 5
+    [1, 0, 0, 1, 1, 0]  # 6: connected to 1, 4, 5
 ]
 
-
 positions = [
-    (1, 2),    # 1
-    (2, 2),    # 2
-    (0, 1),    # 3
-    (3, 1),    # 4
-    (1, 0),    # 5
-    (2, 0)     # 6
+    (1, 2),  # 1
+    (2, 2),  # 2
+    (0, 1),  # 3
+    (3, 1),  # 4
+    (1, 0),  # 5
+    (2, 0)  # 6
 ]
 
 
@@ -40,18 +38,15 @@ def add_edges_regular(graph, N_proc, matrix_adjacency):
         return graph
 
     n_cluster = len(matrix_adjacency)
-    # Regular connections (4-2, 3-1)
     for current_proc in range(N_proc):
         left_child = 2 * current_proc + 1
         right_child = 2 * current_proc + 2
 
         if left_child < N_proc:
-            # Connect to left child (blue connections)
             graph.add_edge(current_proc * n_cluster + 4, left_child * n_cluster + 2, color='blue')
             graph.add_edge(current_proc * n_cluster + 3, left_child * n_cluster + 1, color='blue')
 
         if right_child < N_proc:
-            # Connect to right child (blue connections)
             graph.add_edge(current_proc * n_cluster + 4, right_child * n_cluster + 2, color='blue')
             graph.add_edge(current_proc * n_cluster + 3, right_child * n_cluster + 1, color='blue')
 
@@ -75,18 +70,28 @@ def add_edges_irregular(graph, N_proc, matrix_adjacency):
         level_start = level_end
         level += 1
 
-    # Add green cross connections (6-4) and red connections (4-3) on even levels starting from level 1
+    # Add red connections (4-3) on even levels
     for current_level in range(1, len(levels), 2):
         current_level_nodes = levels[current_level]
-        for i in range(0, len(current_level_nodes) - 1, 2):
-            if i + 1 < len(current_level_nodes):
-                node1 = current_level_nodes[i]
-                node2 = current_level_nodes[i + 1]
-                # Cross connections 6-4
-                graph.add_edge((node1 - 1) * n_cluster + 6, (node2 - 1) * n_cluster + 4, color='green')
-                graph.add_edge((node2 - 1) * n_cluster + 6, (node1 - 1) * n_cluster + 4, color='green')
-                # Horizontal connection 4-3
-                graph.add_edge((node1 - 1) * n_cluster + 4, (node2 - 1) * n_cluster + 3, color='red')
+        for i in range(len(current_level_nodes) - 1):
+            node1 = current_level_nodes[i]
+            node2 = current_level_nodes[i + 1]
+            graph.add_edge((node1 - 1) * n_cluster + 4, (node2 - 1) * n_cluster + 3, color='red')
+
+    # Add green cross connections (6-4) from even levels to next level
+    for current_level in range(1, len(levels) - 1, 2):
+        current_level_nodes = levels[current_level]
+        next_level_nodes = levels[current_level + 1]
+
+        for i in range(0, len(current_level_nodes), 2):
+            if i + 1 < len(current_level_nodes) and i // 2 < len(next_level_nodes):
+                current_node1 = current_level_nodes[i]
+                current_node2 = current_level_nodes[i + 1]
+                next_node = next_level_nodes[i // 2]
+
+                # Cross connections from current level pair to next level node
+                graph.add_edge((current_node1 - 1) * n_cluster + 6, (next_node - 1) * n_cluster + 4, color='green')
+                graph.add_edge((current_node2 - 1) * n_cluster + 6, (next_node - 1) * n_cluster + 4, color='green')
 
     return graph
 
