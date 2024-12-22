@@ -54,7 +54,7 @@ def add_edges_regular(graph, N_proc, matrix_adjacency):
 
 
 def add_edges_irregular(graph, N_proc, matrix_adjacency):
-    if N_proc == 1:
+    if N_proc <= 1:
         return graph
 
     n_cluster = len(matrix_adjacency)
@@ -70,28 +70,21 @@ def add_edges_irregular(graph, N_proc, matrix_adjacency):
         level_start = level_end
         level += 1
 
-    # Add red connections (4-3) on even levels
-    for current_level in range(1, len(levels), 2):
+    # Add red connections (4-3) on odd levels
+    for current_level in range(1, len(levels), 2):  # odd levels
         current_level_nodes = levels[current_level]
         for i in range(len(current_level_nodes) - 1):
             node1 = current_level_nodes[i]
             node2 = current_level_nodes[i + 1]
             graph.add_edge((node1 - 1) * n_cluster + 4, (node2 - 1) * n_cluster + 3, color='red')
 
-    # Add green cross connections (6-4) from even levels to next level
-    for current_level in range(1, len(levels) - 1, 2):
+
+    for current_level in range(2, len(levels), 2):
         current_level_nodes = levels[current_level]
-        next_level_nodes = levels[current_level + 1]
-
-        for i in range(0, len(current_level_nodes), 2):
-            if i + 1 < len(current_level_nodes) and i // 2 < len(next_level_nodes):
-                current_node1 = current_level_nodes[i]
-                current_node2 = current_level_nodes[i + 1]
-                next_node = next_level_nodes[i // 2]
-
-                # Cross connections from current level pair to next level node
-                graph.add_edge((current_node1 - 1) * n_cluster + 6, (next_node - 1) * n_cluster + 4, color='green')
-                graph.add_edge((current_node2 - 1) * n_cluster + 6, (next_node - 1) * n_cluster + 4, color='green')
+        for i in range(len(current_level_nodes) - 1):
+            node1 = current_level_nodes[i]
+            node2 = current_level_nodes[i + 1]
+            graph.add_edge((node1 - 1) * n_cluster + 6, (node2 - 1) * n_cluster + 3, color='green')
 
     return graph
 
@@ -179,7 +172,7 @@ def calculate_metrics(graph):
 
 
 def main():
-    N_proc = 15  # Number of processors
+    N_proc = 31  # Number of processors
     metrics_table = pd.DataFrame(columns=['Кластери', 'Процесори', 'Діаметр',
                                           'Середній діаметр', 'Ступінь', 'Вартість', 'Топологічний трафік'])
 
