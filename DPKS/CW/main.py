@@ -98,11 +98,6 @@ def calculate_characteristics(adjacency_matrix):
     degrees = np.sum(adjacency_matrix, axis=1)
     max_degree = np.max(degrees)
 
-    # Print degrees for verification
-    for i, degree in enumerate(degrees):
-        if degree == max_degree:
-            print(f"Node {i + 1} has maximum degree {degree}")
-
     distances = floyd_warshall(adjacency_matrix)
     diameter = np.max(distances[distances != np.inf])
     average_diameter = np.mean(distances[distances != np.inf])
@@ -111,11 +106,11 @@ def calculate_characteristics(adjacency_matrix):
     cost = np.sum(adjacency_matrix) // 2
 
     return {
-        "Max Degree": max_degree,
-        "Diameter": diameter,
-        "Average Diameter": average_diameter,
-        "Topological Traffic": topological_traffic,
-        "Cost": cost,
+        "Ступінь": max_degree,
+        "Діаметр": diameter,
+        "Сер. Діаметр": average_diameter,
+        "Трафік": topological_traffic,
+        "Вартість": cost,
     }
 
 
@@ -148,38 +143,38 @@ def distributed_gradient_descent(adjacency_matrix, data_splits, max_iter=3, lear
     global_gradient = np.zeros((num_nodes,))
 
     for iteration in range(max_iter):
-        print(f"\n--- Iteration {iteration + 1} ---")
+        print(f"\n--- Ітерація {iteration + 1} ---")
 
         local_gradients = []
-        print("Parallel Local Gradient Computation:")
+        print("Паралельні локальні градієнтні обчислення:")
         for i, data in enumerate(data_splits):
             gradient = compute_local_gradient(data, params[i])
             local_gradients.append(gradient)
             print(f"Node {i + 1}: Local Gradient = {gradient:.4f}")
 
-        print("\nParallel Gradient Aggregation:")
+        print("\nПаралельна градієнтна агрегація:")
         for i in range(num_nodes):
             neighbors = np.where(adjacency_matrix[i] == 1)[0]
             global_gradient[i] = np.mean([local_gradients[j] for j in neighbors])
-            print(f"Node {i + 1}: Aggregated Gradient = {global_gradient[i]:.4f}")
+            print(f"Вузол {i + 1}: Агрегований градієнт = {global_gradient[i]:.4f}")
 
-        print("\nParallel Parameter Update:")
+        print("\nПаралельне оновлення параметрів:")
         for i in range(num_nodes):
             params[i] -= learning_rate * global_gradient[i]
-            print(f"Node {i + 1}: Updated Parameter = {params[i]:.4f}")
+            print(f"Вузол {i + 1}: Оновлений параметр = {params[i]:.4f}")
 
     return params
 
 
 if __name__ == "__main__":
-    order = int(input("Enter the order of the topology: "))
+    order = int(input("Введіть порядок топологічної організації: "))
     clusters = 3 * order  # 3 clusters per row, scaled by order
     adjacency_matrix = connect_clusters(clusters)
 
-    print(f"Number of vertices: {adjacency_matrix.shape[0]}")
+    print(f"Число вершин: {adjacency_matrix.shape[0]}")
 
     characteristics = calculate_characteristics(adjacency_matrix)
-    print("\nCharacteristics of the topology:")
+    print("\nХарактеристики:")
     for key, value in characteristics.items():
         print(f"{key}: {value}")
 
@@ -189,6 +184,6 @@ if __name__ == "__main__":
 
     final_params = distributed_gradient_descent(adjacency_matrix, data_splits)
 
-    print("\nFinal Parameters:")
+    print("\nФінальні Параметри:")
     for i, param in enumerate(final_params):
-        print(f"Node {i + 1}: {param:.4f}")
+        print(f"Вузол {i + 1}: {param:.4f}")
