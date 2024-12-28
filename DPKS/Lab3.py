@@ -70,14 +70,12 @@ def add_edges_irregular(graph, N_proc, matrix_adjacency):
         level_start = level_end
         level += 1
 
-    # Add red connections (4-3) on odd levels
-    for current_level in range(1, len(levels), 2):  # odd levels
+    for current_level in range(1, len(levels), 2):
         current_level_nodes = levels[current_level]
         for i in range(len(current_level_nodes) - 1):
             node1 = current_level_nodes[i]
             node2 = current_level_nodes[i + 1]
             graph.add_edge((node1 - 1) * n_cluster + 4, (node2 - 1) * n_cluster + 3, color='red')
-
 
     for current_level in range(2, len(levels), 2):
         current_level_nodes = levels[current_level]
@@ -172,7 +170,7 @@ def calculate_metrics(graph):
 
 
 def main():
-    N_proc = 31  # Number of processors
+    N_proc = 15 # Number of processors
     metrics_table = pd.DataFrame(columns=['Кластери', 'Процесори', 'Діаметр',
                                           'Середній діаметр', 'Ступінь', 'Вартість', 'Топологічний трафік'])
 
