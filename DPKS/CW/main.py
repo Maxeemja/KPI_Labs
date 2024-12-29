@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 
 
 def build_cluster():
@@ -71,8 +72,8 @@ def connect_clusters(cluster_count):
             adjacency_matrix[first_cluster + 9, third_cluster + 9] = 1
             adjacency_matrix[third_cluster + 9, first_cluster + 9] = 1
 
-    # Add vertical connections between rows (red lines in diagram)
-    for row in range(num_rows - 1):  # For all rows except the last
+    # Add vertical connections between rows
+    for row in range(num_rows - 1):
         current_row_start = row * clusters_per_row
         next_row_start = (row + 1) * clusters_per_row
 
@@ -106,11 +107,12 @@ def calculate_characteristics(adjacency_matrix):
     cost = np.sum(adjacency_matrix) // 2
 
     return {
-        "Ступінь": max_degree,
+        "Кількість вершин": adjacency_matrix.shape[0],
         "Діаметр": diameter,
-        "Сер. Діаметр": average_diameter,
-        "Трафік": topological_traffic,
+        "Середній діаметр": average_diameter,
+        "Ступінь": max_degree,
         "Вартість": cost,
+        "Трафік": topological_traffic
     }
 
 
@@ -168,16 +170,35 @@ def distributed_gradient_descent(adjacency_matrix, data_splits, max_iter=3, lear
 
 if __name__ == "__main__":
     order = int(input("Введіть порядок топологічної організації: "))
-    clusters = 3 * order  # 3 clusters per row, scaled by order
-    adjacency_matrix = connect_clusters(clusters)
 
-    print(f"Число вершин: {adjacency_matrix.shape[0]}")
+    # Create a list to store characteristics for each scale
+    all_characteristics = []
 
-    characteristics = calculate_characteristics(adjacency_matrix)
-    print("\nХарактеристики:")
-    for key, value in characteristics.items():
-        print(f"{key}: {value}")
+    # Calculate characteristics for each scale from 1 to order
+    for scale in range(1, order + 1):
+        clusters = 3 * scale  # 3 clusters per row, scaled by order
+        adjacency_matrix = connect_clusters(clusters)
+        characteristics = calculate_characteristics(adjacency_matrix)
+        all_characteristics.append(characteristics)
 
+        print(f"\nХарактеристики для масштабу {scale}:")
+        for key, value in characteristics.items():
+            print(f"{key}: {value}")
+
+    # Create DataFrame and save to Excel
+    df = pd.DataFrame(all_characteristics)
+
+    # Round floating point numbers to 8 decimal places
+    for col in df.columns:
+        if df[col].dtype in ['float64', 'float32']:
+            df[col] = df[col].round(8)
+
+    # Save to Excel
+    excel_filename = 'topology_characteristics.xlsx'
+    df.to_excel(excel_filename, index=False)
+    print(f"\nРезультати збережено у файл: {excel_filename}")
+
+    # Continue with gradient descent if needed
     total_nodes = adjacency_matrix.shape[0]
     np.random.seed(42)
     data_splits = [np.random.rand(10) for _ in range(total_nodes)]
