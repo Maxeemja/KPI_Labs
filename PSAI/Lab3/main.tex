@@ -1,0 +1,129 @@
+\documentclass{report}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Загальна інформація %%%%%%%%%%%%%%%%%%%%%%%%%%
+\Subject {Системи штучного інтелекту}
+\LabTitle{Логістична регресія}
+\LabReport{Практична робота \#3}
+
+
+%----------------------------------------------------
+%	  Персональна інформація виконавця завдання
+%----------------------------------------------------
+\Done{Виконав(ла):}  % Поставте правильне закінчення
+
+
+\Surname{Грицюк}  % Вкажіть своє прізвище
+\Name{Максим}			% та ім'я
+\Group {ІО-41мп}     % група в якій навчаєтесь
+\YearOfStudying {5} % курс навчання
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%	 ПОЧАТОК ЗВІТУ	 %%%%%%%%%%%%%%%%%%%%%%%%
+\startDocument
+
+
+\section{Логістична регресія}
+
+\subsection{Реалізація логістичної регресії}
+Подайте у звіті імплементовані Вами функцій. Це можна зробити через зовнішній файл, наприклад так:
+
+\lstinputlisting[language=Python, style=mypython, caption={Перевірка на парність введеного числа.}]{test.py}
+
+Або вставивши безпосередньо потрібні рядки коду в оточення \texttt{lstlisting}:
+
+\begin{lstlisting}[language=Python, style=mypython, caption={Перетин двох масивів.}]
+def intersection(array_1, array_2):
+  element_1 = set()
+  intersected = []
+  for i in range(0, len(array_1)):
+    element_1.add(array_1[i])
+  already_added = set()
+  for j in range(0, len(array_2)):
+    if array_2[j] in element_1 and array_2[j] not in already_added:
+      intersected.append(array_2[j])
+      # MISSING LINE HERE.
+      already_added.add(array_2[j])
+  return intersected 
+\end{lstlisting}
+
+Без рамки та без підпису:
+
+\begin{lstlisting}[language=Python, style=mypython, frame=none]
+def intersection(array_1, array_2):
+  element_1 = set()
+  intersected = []
+  for i in range(0, len(array_1)):
+    element_1.add(array_1[i])
+  already_added = set()
+  for j in range(0, len(array_2)):
+    if array_2[j] in element_1 and array_2[j] not in already_added:
+      intersected.append(array_2[j])
+      # MISSING LINE HERE.
+      already_added.add(array_2[j])
+  return intersected 
+\end{lstlisting}
+
+\subsection{Результати експериментів}
+Тут Ви повинні подати детальну інформацію про результати свого дослідження щодо упливу швидкості навчання та ітерацій навчання на значення цільової функції та точність моделі логістичної регресії на тестовій вибірці.
+
+Для представлення результатів використовуйте таблиці, графіки, рисунки. Приклад таблиці~\ref{tab:arithmetic}. Приклад рисунку~\ref{im:NN}. 
+ 
+
+\begin{table}[H]
+\caption{Приклад таблиці.}
+\label{tab:arithmetic}
+\begin{center}
+\begin{tabular}{ |>{\centering}p{5cm}|c|>{\centering}p{2.2cm}| }
+\hline
+\rowcolor{lightgray} \multicolumn{2}{|c|}{Ім'я оператора} & Синтаксис \tabularnewline
+\hline
+\multicolumn{2}{|c|}{Присвоєння} & a = b \tabularnewline
+\hline
+\multicolumn{2}{|c|}{Додавання} & a + b  \tabularnewline
+\hline
+\multicolumn{2}{|c|}{Віднімання} &  a - b  \tabularnewline
+\hline
+\multicolumn{2}{|c|}{Унарний плюс} &  +a   \tabularnewline
+\hline
+\multicolumn{2}{|c|}{Унарний мінус} & -a  \tabularnewline
+\hline
+\multicolumn{2}{|c|}{Множення} & a * b \tabularnewline
+\hline
+\multicolumn{2}{|c|}{Ділення} & a / b \tabularnewline
+\hline
+\multicolumn{2}{|c|}{Залишок від ділення} & a \% b \tabularnewline
+\hline
+\multirow{2}{*}{Інкремент}  & префікс & ++a  \tabularnewline
+  & суфікс & a++  \tabularnewline
+\hline
+\multirow{2}{*}{Декремент}  & префікс & - -a  \tabularnewline
+
+  & суфікс & a- -  \tabularnewline
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{figure}[!htb]
+  \center
+  \includegraphics[scale=1]{NN_}
+  \caption{Приклад представлення нейронної мережі.}
+   \label{im:NN}
+\end{figure}
+
+\subsection{Допомога}
+У цьому розділі потрібно залишити додаткові деталі про виконання цієї роботи. Тобто, якщо Ви обговорювали завдання або працювали над ним у групі -- потрібно це зазначати: з ким працювали та що кожен учасник виконував. Якщо отримували допомогу -- вказати від кого та яку допомогу було отримано. Якщо використовували додаткові матеріали (блокноти Kaggle, github тощо) -- залишите посилання на джерела. Якщо завдання було виконано особисто Вами і Ви не отримували ніякої допомоги -- так і напишіть. Використання будь-яких чужих матеріалів та представлення їх за свої напрацювання є плагіатом та серйозним порушенням основних академічних стандартів. 
+
+Приклад для використання цитування~\cite{MadhavCNN, RanjeetDL}.
+
+
+\subsection{Висновки}
+Резюмуйте пророблену Вами роботу, відобразіть свої спостереження щодо змін цільової функції та точності моделі залежно від швидкості навчання та кількості ітерацій навчання.  
+
+
+\newpage
+%%%%%%%%%%%%%%%%%% Література %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\bibliographystyle{IEEEtran}
+\bibliography{ref} 
+\end{document}
