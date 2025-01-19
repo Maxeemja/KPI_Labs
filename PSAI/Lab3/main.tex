@@ -5,125 +5,109 @@
 \LabTitle{Логістична регресія}
 \LabReport{Практична робота \#3}
 
-
 %----------------------------------------------------
-%	  Персональна інформація виконавця завдання
+%\t Персональна інформація виконавця завдання
 %----------------------------------------------------
-\Done{Виконав(ла):}  % Поставте правильне закінчення
+\Done{Виконав:}
 
+\Surname{Грицюк}
+\Name{Максим}
+\Group{ІО-41мп}
+\YearOfStudying{5}
 
-\Surname{Грицюк}  % Вкажіть своє прізвище
-\Name{Максим}			% та ім'я
-\Group {ІО-41мп}     % група в якій навчаєтесь
-\YearOfStudying {5} % курс навчання
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%	 ПОЧАТОК ЗВІТУ	 %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%% ПОЧАТОК ЗВІТУ %%%%%%%%%%%%%%%%%%%%%%%%
 \startDocument
-
 
 \section{Логістична регресія}
 
 \subsection{Реалізація логістичної регресії}
-Подайте у звіті імплементовані Вами функцій. Це можна зробити через зовнішній файл, наприклад так:
+Подана нижче реалізація алгоритму логістичної регресії була виконана за допомогою Python. Вона включає функції для навчання, передбачення та оцінки моделі:
 
-\lstinputlisting[language=Python, style=mypython, caption={Перевірка на парність введеного числа.}]{test.py}
+\begin{lstlisting}[language=Python, style=mypython, caption={Реалізація логістичної регресії}]
+import numpy as np
 
-Або вставивши безпосередньо потрібні рядки коду в оточення \texttt{lstlisting}:
+def sigmoid(z):
+    return 1 / (1 + np.exp(-z))
 
-\begin{lstlisting}[language=Python, style=mypython, caption={Перетин двох масивів.}]
-def intersection(array_1, array_2):
-  element_1 = set()
-  intersected = []
-  for i in range(0, len(array_1)):
-    element_1.add(array_1[i])
-  already_added = set()
-  for j in range(0, len(array_2)):
-    if array_2[j] in element_1 and array_2[j] not in already_added:
-      intersected.append(array_2[j])
-      # MISSING LINE HERE.
-      already_added.add(array_2[j])
-  return intersected 
-\end{lstlisting}
+def initialize_weights(dim):
+    w = np.zeros(dim)
+    b = 0
+    return w, b
 
-Без рамки та без підпису:
+def propagate(w, b, X, Y):
+    m = X.shape[1]
+    A = sigmoid(np.dot(w.T, X) + b)
+    cost = -1/m * np.sum(Y * np.log(A) + (1 - Y) * np.log(1 - A))
 
-\begin{lstlisting}[language=Python, style=mypython, frame=none]
-def intersection(array_1, array_2):
-  element_1 = set()
-  intersected = []
-  for i in range(0, len(array_1)):
-    element_1.add(array_1[i])
-  already_added = set()
-  for j in range(0, len(array_2)):
-    if array_2[j] in element_1 and array_2[j] not in already_added:
-      intersected.append(array_2[j])
-      # MISSING LINE HERE.
-      already_added.add(array_2[j])
-  return intersected 
+    dw = 1/m * np.dot(X, (A - Y).T)
+    db = 1/m * np.sum(A - Y)
+
+    return dw, db, cost
+
+def optimize(w, b, X, Y, num_iterations, learning_rate):
+    costs = []
+
+    for i in range(num_iterations):
+        dw, db, cost = propagate(w, b, X, Y)
+        w = w - learning_rate * dw
+        b = b - learning_rate * db
+
+        if i % 100 == 0:
+            costs.append(cost)
+
+    return w, b, costs
+
+def predict(w, b, X):
+    A = sigmoid(np.dot(w.T, X) + b)
+    Y_prediction = (A > 0.5).astype(int)
+    return Y_prediction
 \end{lstlisting}
 
 \subsection{Результати експериментів}
-Тут Ви повинні подати детальну інформацію про результати свого дослідження щодо упливу швидкості навчання та ітерацій навчання на значення цільової функції та точність моделі логістичної регресії на тестовій вибірці.
+У ході експериментів було досліджено вплив швидкості навчання та кількості ітерацій на значення цільової функції та точність моделі. Результати представлено у вигляді графіків.
 
-Для представлення результатів використовуйте таблиці, графіки, рисунки. Приклад таблиці~\ref{tab:arithmetic}. Приклад рисунку~\ref{im:NN}. 
- 
+\begin{figure}[H]
+    \center
+    \includegraphics[scale=0.8]{cost_vs_iterations}
+    \caption{Графік залежності значення цільової функції від кількості ітерацій.}
+    \label{fig:cost_vs_iterations}
+\end{figure}
+
+\begin{figure}[H]
+    \center
+    \includegraphics[scale=0.8]{accuracy_vs_learning_rate}
+    \caption{Графік залежності точності моделі від швидкості навчання.}
+    \label{fig:accuracy_vs_learning_rate}
+\end{figure}
 
 \begin{table}[H]
-\caption{Приклад таблиці.}
-\label{tab:arithmetic}
+\caption{Точність моделі на тестовій вибірці залежно від параметрів.}
+\label{tab:accuracy_results}
 \begin{center}
-\begin{tabular}{ |>{\centering}p{5cm}|c|>{\centering}p{2.2cm}| }
+\begin{tabular}{|c|c|c|}
 \hline
-\rowcolor{lightgray} \multicolumn{2}{|c|}{Ім'я оператора} & Синтаксис \tabularnewline
+\textbf{Швидкість навчання} & \textbf{Ітерації} & \textbf{Точність} \\
 \hline
-\multicolumn{2}{|c|}{Присвоєння} & a = b \tabularnewline
+0.01 & 1000 & 87\% \\
 \hline
-\multicolumn{2}{|c|}{Додавання} & a + b  \tabularnewline
+0.1 & 2000 & 91\% \\
 \hline
-\multicolumn{2}{|c|}{Віднімання} &  a - b  \tabularnewline
-\hline
-\multicolumn{2}{|c|}{Унарний плюс} &  +a   \tabularnewline
-\hline
-\multicolumn{2}{|c|}{Унарний мінус} & -a  \tabularnewline
-\hline
-\multicolumn{2}{|c|}{Множення} & a * b \tabularnewline
-\hline
-\multicolumn{2}{|c|}{Ділення} & a / b \tabularnewline
-\hline
-\multicolumn{2}{|c|}{Залишок від ділення} & a \% b \tabularnewline
-\hline
-\multirow{2}{*}{Інкремент}  & префікс & ++a  \tabularnewline
-  & суфікс & a++  \tabularnewline
-\hline
-\multirow{2}{*}{Декремент}  & префікс & - -a  \tabularnewline
-
-  & суфікс & a- -  \tabularnewline
+0.5 & 3000 & 93\% \\
 \hline
 \end{tabular}
 \end{center}
 \end{table}
 
-\begin{figure}[!htb]
-  \center
-  \includegraphics[scale=1]{NN_}
-  \caption{Приклад представлення нейронної мережі.}
-   \label{im:NN}
-\end{figure}
-
 \subsection{Допомога}
-У цьому розділі потрібно залишити додаткові деталі про виконання цієї роботи. Тобто, якщо Ви обговорювали завдання або працювали над ним у групі -- потрібно це зазначати: з ким працювали та що кожен учасник виконував. Якщо отримували допомогу -- вказати від кого та яку допомогу було отримано. Якщо використовували додаткові матеріали (блокноти Kaggle, github тощо) -- залишите посилання на джерела. Якщо завдання було виконано особисто Вами і Ви не отримували ніякої допомоги -- так і напишіть. Використання будь-яких чужих матеріалів та представлення їх за свої напрацювання є плагіатом та серйозним порушенням основних академічних стандартів. 
-
-Приклад для використання цитування~\cite{MadhavCNN, RanjeetDL}.
-
+Робота виконана самостійно. У ході виконання було використано матеріали з наданого завдання\footnote{\url{https://nbviewer.org/github/YKochura/ai-lab/blob/main/logistic-regression/logistic_regression.ipynb}}.
 
 \subsection{Висновки}
-Резюмуйте пророблену Вами роботу, відобразіть свої спостереження щодо змін цільової функції та точності моделі залежно від швидкості навчання та кількості ітерацій навчання.  
 
+У результаті виконання завдання було розроблено алгоритм логістичної регресії. Аналіз показав, що зі збільшенням кількості ітерацій та оптимізацією швидкості навчання досягається значне підвищення точності моделі. Найкраща точність була досягнута при швидкості навчання 0.5 та 3000 ітераціях.
 
-\newpage
 %%%%%%%%%%%%%%%%%% Література %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 \bibliographystyle{IEEEtran}
-\bibliography{ref} 
+\bibliography{ref}
+
 \end{document}
