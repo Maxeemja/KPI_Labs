@@ -2,7 +2,6 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
-import math as mt
 import sys
 
 
@@ -88,7 +87,7 @@ def calculate_r_squared(data, model):
 if __name__ == "__main__":
     # Параметри
     file_name = "Oschadbank-USD.xls"  # Змінити на реальне ім'я файлу
-    column_name = "Купівля"  # Назва колонки з даними
+    column_name = "Продаж"  # Назва колонки з даними
     future_interval_ratio = 0.5  # Прогнозування на 50% інтервалу
 
     # Завантаження та очищення даних
@@ -108,4 +107,40 @@ if __name__ == "__main__":
 
     # Обчислення R^2 для поліноміальної моделі
     r_squared_poly = calculate_r_squared(filtered_data, poly_model)
-    print(f"Коефіцієнт детермінації R^2 для полі")
+    print(f"Коефіцієнт детермінації R^2 для поліноміальної регресії: {r_squared_poly}")
+
+    # Прогнозування
+    n_future = int(len(filtered_data) * future_interval_ratio)
+    future_predictions = extrapolate(poly_model, n_future)
+
+    # 2. Група вимог_2: Альфа-бета фільтр
+    # Адаптація параметрів альфа-бета фільтра на основі R^2
+    if r_squared_poly > 0.8:
+        alpha = 0.8
+        beta = 0.1
+        print(
+            "\nВисока якість моделі (R^2 > 0.8): Використовуємо параметри альфа-бета фільтра для меншого згладжування.")
+    else:
+        alpha = 0.3
+        beta = 0.05
+        print(
+            "\nНизька якість моделі (R^2 <= 0.8): Використовуємо параметри альфа-бета фільтра для сильнішого згладжування.")
+
+    smoothed_data = alpha_beta_filter(filtered_data, alpha, beta)
+    print("\nГрупа вимог_2: Альфа-бета фільтр")
+
+    # Візуалізація результатів
+    plt.figure(figsize=(12, 6))
+    plt.plot(filtered_data, label="Очищені дані (IQR)")
+    plt.plot(smoothed_data, label="Згладжені дані (Альфа-бета фільтр)")
+
+    # Відображення прогнозованих значень
+    future_x = np.arange(len(filtered_data), len(filtered_data) + n_future)
+    plt.plot(future_x, future_predictions, label="Прогноз (Поліноміальна регресія)")
+
+    plt.xlabel("Час")
+    plt.ylabel("Значення")
+    plt.title("Аналіз та прогнозування даних")
+    plt.legend()
+    plt.grid(True)
+    plt.show()
