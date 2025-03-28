@@ -87,7 +87,7 @@ def calculate_r_squared(data, model):
 if __name__ == "__main__":
     # Параметри
     file_name = "Oschadbank-USD.xls"  # Змінити на реальне ім'я файлу
-    column_name = "Продаж"  # Назва колонки з даними
+    column_name = "КурсНбу"  # Назва колонки з даними
     future_interval_ratio = 0.5  # Прогнозування на 50% інтервалу
 
     # Завантаження та очищення даних
